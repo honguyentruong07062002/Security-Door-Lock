@@ -113,6 +113,10 @@ int dem=0;
             Serial.println("Gui du lieu mo cua");
             gui(1);
             }
+            else if(response.indexOf("IP")>=0)
+            {
+            SendMessage(0);
+            }
             
           }
           else
@@ -211,7 +215,7 @@ server.on("/Update",[]{
  server.on("/",[]{
     SendWebPage();
   });
- SendMessage(0);
+ 
    }
 
  void write_to_google_sheet(String params) // gửi string paramas lên gg sheet
